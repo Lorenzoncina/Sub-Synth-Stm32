@@ -24,7 +24,9 @@ drivers/stm32f407vg_discovery/audio.cpp \
 drivers/stm32f407vg_discovery/cs43l22dac.cpp \
 audio/audio_processor.cpp \
 midi/midiXparser.cpp \
-midi/midi.cpp
+midi/midi.cpp \
+synth/oscillators.cpp \
+synth/knob.cpp
 
 ##
 ## List here additional static libraries with relative path

@@ -10,6 +10,7 @@
 #include <algorithm>
 #include <math.h>
 #include <cstdint>
+#include "synth/oscillators.h"
 
 using namespace miosix;
 using namespace std;
@@ -74,10 +75,11 @@ int main() {
     // initializing the audio driver
     AudioDriver &audioDriver = AudioDriver::getInstance();
     audioDriver.getBuffer();
-    AudioProcessorTestOld audioProcessorTestOld;
-    AudioProcessorTest audioProcessorTestNew;
+    //AudioProcessorTestOld audioProcessorTestOld;
+    //AudioProcessorTest audioProcessorTestNew;
+    SinusoidalOsc sinOsc;
     audioDriver.init(SampleRate::_44100Hz);
-    audioDriver.setAudioProcessable(audioProcessorTestNew);
+    audioDriver.setAudioProcessable(sinOsc);
     audioDriver.start();
 
     while (true);
