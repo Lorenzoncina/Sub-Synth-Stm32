@@ -22,7 +22,7 @@ public:
 
     inline float getSampleRate() { return audioDriver.getSampleRate(); };
 
-private:
+protected:
     /**
      * Reference to the AudioDriver.
      */

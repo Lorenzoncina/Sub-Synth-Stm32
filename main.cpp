@@ -11,6 +11,10 @@
 #include <math.h>
 #include <cstdint>
 #include "synth/oscillators.h"
+#include "synth/synth.h"
+#include "synth/knob.h"
+
+
 
 using namespace miosix;
 using namespace std;
@@ -77,9 +81,12 @@ int main() {
     audioDriver.getBuffer();
     //AudioProcessorTestOld audioProcessorTestOld;
     //AudioProcessorTest audioProcessorTestNew;
-    SinusoidalOsc sinOsc;
+    //SinusoidalOsc sinOsc;
+    Synth synth;
     audioDriver.init(SampleRate::_44100Hz);
-    audioDriver.setAudioProcessable(sinOsc);
+    audioDriver.setAudioProcessable(synth);
+
+    //start the processing
     audioDriver.start();
 
     while (true);

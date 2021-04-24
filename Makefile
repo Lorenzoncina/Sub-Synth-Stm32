@@ -26,7 +26,9 @@ audio/audio_processor.cpp \
 midi/midiXparser.cpp \
 midi/midi.cpp \
 synth/oscillators.cpp \
-synth/knob.cpp
+synth/knob.cpp \
+synth/synth.cpp \
+synth/filters.cpp
 
 ##
 ## List here additional static libraries with relative path

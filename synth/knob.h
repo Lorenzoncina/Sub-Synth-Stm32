@@ -16,8 +16,11 @@ public:
     Knob(string port, int pin);
     unsigned int read();
 private:
+
     string port;
     int pin;
+
+
 };
 
 #endif //MIOSIX_AUDIO_DRIVER_KNOB_H

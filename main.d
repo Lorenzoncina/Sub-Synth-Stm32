@@ -39,6 +39,7 @@ main.o: main.cpp miosix/miosix.h miosix/interfaces/arch_registers.h \
  audio/audio_buffer.h audio/audio_buffer.hpp audio/audio_math.h \
  midi/midi.h midi/midiXparser.h tests/midi_test_data.h \
  synth/oscillators.h audio/audio_processor.h audio/audio_math.h \
+ synth/knob.h synth/synth.h synth/oscillators.h synth/filters.h \
  synth/knob.h
 
 miosix/miosix.h:
@@ -162,5 +163,13 @@ synth/oscillators.h:
 audio/audio_processor.h:
 
 audio/audio_math.h:
+
+synth/knob.h:
+
+synth/synth.h:
+
+synth/oscillators.h:
+
+synth/filters.h:
 
 synth/knob.h:
