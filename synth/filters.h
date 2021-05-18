@@ -60,7 +60,7 @@ private:
     float a0,a1,a2, b1,b2;
 
     Knob *cutOff;
-    Knob *resonance;
+    //Knob *resonance;
     //typedef Gpio<GPIOB_BASE,2> cutOff;
 
 };

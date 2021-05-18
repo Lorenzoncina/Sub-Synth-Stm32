@@ -44,8 +44,8 @@ BiquadFilter::BiquadFilter(BiquadFilter::FilterType type){
     lastoutRight=0;
     lastout2Right=0;
 
-    //cutOff = new Knob("A",3);
-    resonance = new Knob("A", 2);
+    cutOff = new Knob("A",2);
+    //resonance = new Knob("A", 3);
     //cutOff::mode(Mode::INPUT);
 
 }
@@ -55,13 +55,15 @@ void BiquadFilter::process() {
     float *leftChannel = buffer.getWritePointer(0);
     float *rightChannel = buffer.getWritePointer(1);
 
-    unsigned int temp,cutOffFreq;
+    unsigned int temp, cutOffFreq;
     float res;
     //for(int i= 0; i<2; i++) {
-        cutOffFreq = cutOff->read();
-        temp = resonance->read();
-        res = temp / 200.0;
-        //res = 0.1;
+    //while (true) {
+    cutOffFreq = cutOff->read();
+//}
+        //temp = resonance->read();
+        //res = temp / 200.0;
+        res = 0.1;
         //map res beetwen 0 and 20
     //}
     //int cutOffFreq = cutOff::value();

@@ -18,6 +18,7 @@
 
 using namespace miosix;
 using namespace std;
+using namespace AudioMath;
 
 // testing an implementation of an AudioProcessor
 class AudioProcessorTestOld : public AudioProcessor {
@@ -89,6 +90,9 @@ int main() {
     //start the processing
     audioDriver.start();
 
-    while (true);
+
+    while (true){
+
+    }
 
 }

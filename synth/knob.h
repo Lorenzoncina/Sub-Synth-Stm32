@@ -19,8 +19,6 @@ private:
 
     string port;
     int pin;
-
-
 };
 
 #endif //MIOSIX_AUDIO_DRIVER_KNOB_H

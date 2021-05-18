@@ -6,11 +6,19 @@
 
 Synth::Synth()/*: lpf(BiquadFilter::FilterType::HIGH_PASS_FILTER)*/ {
     lpf = new BiquadFilter( BiquadFilter::FilterType::FIRST_ORDER_LOW_PASS_FILTER);
+    oscChooser = 0;
 }
 
 void Synth::process() {
-    FastInterruptDisableLock lock;
-    //osc.process();
-    noise.process();
+    //selection of the oscillator
+
+
+    sinOsc.process();
+
+    sqrOsc.process();
+
+    //noise.process();
+
     lpf->process();
+    vol.process();
 }

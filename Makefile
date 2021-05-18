@@ -28,7 +28,8 @@ midi/midi.cpp \
 synth/oscillators.cpp \
 synth/knob.cpp \
 synth/synth.cpp \
-synth/filters.cpp
+synth/filters.cpp \
+synth/volume.cpp
 
 ##
 ## List here additional static libraries with relative path

@@ -10,8 +10,10 @@
 #include <math.h>
 #include "oscillators.h"
 #include "filters.h"
+#include "volume.h"
 //#include "./main.cpp"
 
+typedef Gpio<GPIOA_BASE,5>  oscButton;
 
 class Synth : public AudioProcessor{
 public:
@@ -20,11 +22,12 @@ public:
     void process() override;
 
 private:
-
-    WhiteNoise noise;
-    //SinusoidalOsc osc;
-    //SquareOsc osc;
+    int oscChooser;
+    //WhiteNoise noise;
+    SinusoidalOsc sinOsc;
+    SquareOsc sqrOsc;
     BiquadFilter* lpf;
+    Volume vol;
 };
 
 

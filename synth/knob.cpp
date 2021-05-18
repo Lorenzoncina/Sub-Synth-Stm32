@@ -22,8 +22,6 @@ Knob::Knob(string port, int pin){
         RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN; // clock for GPIOA
         GPIOA->MODER |= (ANALOG_MODE << (2*pin)); // analog mode
         GPIOA->AFR[0] |= (6 << (4 * pin)); // alternate function ADC123_IN1
-
-
     }else if(port =="B")
     {
         RCC->AHB1ENR |= (1<<1);
@@ -46,10 +44,12 @@ unsigned int Knob::read() {
     if(pin == 1 ) {
         ADC1->SQR3 = (1 << 0); // single conversion from channel 1
     }
-    else if(pin == 3) {
+    else if(pin == 2) {
+        ADC1->SQR3 = (1 << 1); // single conversion from channel 2
+    } else if(pin == 3) {
         ADC1->SQR3 = (1 << 0) | (1 << 1); // single conversion from channel 3
-    } else if(pin == 2) {
-        ADC1->SQR3 = (1 << 1); // single conversion from channel 3
+    }else if(pin == 4){
+        ADC1 -> SQR3 = (1 << 2); // single cnversion from channel 4
     }
 
     ADC1->CR2 |= ADC_CR2_SWSTART; // starts the single conversion
