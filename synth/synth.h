@@ -14,6 +14,7 @@
 //#include "./main.cpp"
 
 typedef Gpio<GPIOA_BASE,5>  oscButton;
+typedef Gpio<GPIOB_BASE,2>  filterButton;
 
 class Synth : public AudioProcessor{
 public:
@@ -21,12 +22,21 @@ public:
 
     void process() override;
 
+    void setOsc(int oscChooserArg);
+
 private:
-    int oscChooser;
-    //WhiteNoise noise;
+    int oscType, filterType;
+    int oscValue, oscOldValue, filterValue, filterOldValue;
+    //Oscillators
+    WhiteNoise noise;
     SinusoidalOsc sinOsc;
     SquareOsc sqrOsc;
+    //filters
     BiquadFilter* lpf;
+    BiquadFilter* hpf;
+    BiquadFilter* lpf2;
+    BiquadFilter* hpf2;
+    //Volume controller
     Volume vol;
 };
 

@@ -23,7 +23,7 @@ void Volume::process() {
     for(int i=0; i< buffer.getBufferLength();i++) {
         currinLeft = leftChannel[i];
         currinRight = rightChannel[i];
-
+        // TODO smoothing of this parameter (to avoid clicks)
         leftChannel[i] = currinLeft * vol;
         rightChannel[i] =  currinRight *  vol;
     }

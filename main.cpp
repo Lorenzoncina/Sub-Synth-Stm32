@@ -20,61 +20,28 @@ using namespace miosix;
 using namespace std;
 using namespace AudioMath;
 
-// testing an implementation of an AudioProcessor
-class AudioProcessorTestOld : public AudioProcessor {
-public:
-    AudioProcessorTestOld() {
-        for (int i = 0; i < AUDIO_DRIVER_BUFFER_SIZE; ++i) {
-            sinTable[i] = sin(2 * 3.14 * i / AUDIO_DRIVER_BUFFER_SIZE);
+typedef Gpio<GPIOA_BASE,5>  oscButton;
+
+int oscType = 0;
+Synth synth;
+
+/*
+void *buttonThread(void *arg){
+    oscButton::mode(Mode::INPUT);
+    int value, oldValue = 0;
+    while(true){
+        value = oscButton::value();
+        //every rising edge change the osc type
+        if(value != oldValue && value == 1){
+            oscType += 1;
+            if(oscType > 2)
+                oscType = 0;
+            synth.setOsc(oscType);
         }
+        oldValue = value;
     }
-
-    void process() override {
-        auto &buffer = getBuffer();
-        auto leftChannel = buffer.getWritePointer(0);
-        for (unsigned int i = 0; i < getBufferSize(); ++i) {
-            leftChannel[i] = sinTable[i];
-        }
-    }
-
-    float sinTable[AUDIO_DRIVER_BUFFER_SIZE];
-};
-
-// testing an implementation of an AudioProcessor
-class AudioProcessorTest : public AudioProcessor {
-public:
-    AudioProcessorTest() : sineLUT([](float x) { return std::sin(x); }, 0, 2 * M_PI,
-                                   AudioMath::LookupTableEdges::PERIODIC) {}
-
-    void process() override {
-        auto &buffer = getBuffer();
-        float *left = buffer.getWritePointer(0);
-        float *right = buffer.getWritePointer(1);
-        static float linearCount = 0.0;
-
-        for (auto i = 0; i < getBufferSize(); i += 1) {
-            left[i] = 0.8 * sineLUT(phase);
-            right[i] = left[i];
-            phase += phaseDelta;
-            if (phase >= 2 * M_PI) phase -= 2 * M_PI;
-
-//            left[i] = linearCount * 2 - 1;
-//            linearCount += phaseDelta;
-//            if (linearCount >= 1) linearCount = 0;
-
-        }
-
-    }
-
-    AudioMath::LookupTable<128> sineLUT;
-
-    float phase = 0;
-    float phaseDelta = 440 * 2 * M_PI / 44100.0;
-//    float phaseDelta = 10 / 44100.0;
-
-};
-
-
+}
+*/
 int main() {
 
     // initializing the audio driver
@@ -83,13 +50,17 @@ int main() {
     //AudioProcessorTestOld audioProcessorTestOld;
     //AudioProcessorTest audioProcessorTestNew;
     //SinusoidalOsc sinOsc;
-    Synth synth;
+
     audioDriver.init(SampleRate::_44100Hz);
     audioDriver.setAudioProcessable(synth);
 
     //start the processing
     audioDriver.start();
 
+    //Thread button
+
+    //pthread_t t;
+    //pthread_create(&t ,NULL, buttonThread, NULL);
 
     while (true){
 
