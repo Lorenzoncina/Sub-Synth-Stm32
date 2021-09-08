@@ -1,7 +1,1 @@
-
-Welcome to the Miosix kernel
-============================
-
-You can find information on how to configure and use the kernel
-at the following url: http://miosix.org
-
+Sub-Synth-Stm32 is a monophonic digital synthesizer, developed as a simple prof of concept of our Microaudio framework for digital audio (https://github.com/FedericoDiMarzo/microaudio). It was developed using the STM32f407vg board, running a version of the Miosix operating system, for which a DAC support of the board (Cirrus Logic cs43l22dac) has been implemented. To controll it , an interface of 4 potentiometers and two buttons was implemented.
