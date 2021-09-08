@@ -2,3 +2,5 @@ Sub-Synth is a monophonic digital synthesizer, developed as a simple prof of con
 
 Sub-Synth consists of three different type of oscillators (sine, square, white noise) and four biquadratic filters (low pass and high pass of the first order and of the second order) implementing one of the which implements one of the most popular and simple synthesis techniques: subtractive synthesis.
 The user can interact with the synth by choose the waveform of the oscillator with a button and then the frequency, he can then choose one of the filters and change the cut of frequency. Finally a potentiometer can be use to controll the volume of the sound synthetized.
+
+In the following image subtractive synthesis is conceptually explained:
