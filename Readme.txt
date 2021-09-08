@@ -4,3 +4,6 @@ Sub-Synth consists of three different type of oscillators (sine, square, white n
 The user can interact with the synth by choose the waveform of the oscillator with a button and then the frequency, he can then choose one of the filters and change the cut of frequency. Finally a potentiometer can be use to controll the volume of the sound synthetized.
 
 In the following image subtractive synthesis is conceptually explained:
+
+
+![name-of-you-image](https://github.com/Lorenzoncina/Sub-Synth-Stm32/blob/master/sub%20synth%20img.jpg?raw=true)
