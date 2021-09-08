@@ -7,33 +7,11 @@
 BiquadFilter::BiquadFilter(BiquadFilter::FilterType type){
     this->type = type;
     //filter's conefficients inizialization
-    if(type == BiquadFilter::FilterType::FIRST_ORDER_LOW_PASS_FILTER){
-        this->a0 = 0.0;
-        this->a1 = 0.0;
-        this->a2 = 0.0;
-        this->b1 = 0.0;
-        this->b2 = 0.0;
-    } else if(type == BiquadFilter::FilterType::FIRST_ORDER_HIGH_PASS_FILTER){
-        this->a0 = 0.0;
-        this->a1 = 0.0;
-        this->a2 = 0.0;
-        this->b1 = 0.0;
-        this->b2 = 0.0;
-    }
-    else if(type == BiquadFilter::FilterType::SECOND_ORDER_LOW_PASS_FILTER){
-        this->a0 = 0.0;
-        this->a1 = 0.0;
-        this->a2 = 0.0;
-        this->b1 = 0.0;
-        this->b2 = 0.0;
-    }
-    else if(type == BiquadFilter::FilterType::SECOND_ORDER_HIGH_PASS_FILTER){
-        this->a0 = 0.0;
-        this->a1 = 0.0;
-        this->a2 = 0.0;
-        this->b1 = 0.0;
-        this->b2 = 0.0;
-    }
+    this->a0 = 0.0;
+    this->a1 = 0.0;
+    this->a2 = 0.0;
+    this->b1 = 0.0;
+    this->b2 = 0.0;
 
     lastinLeft = 0;
     lastin2Left= 0;

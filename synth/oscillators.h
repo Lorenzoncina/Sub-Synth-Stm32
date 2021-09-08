@@ -15,7 +15,7 @@
 
 using namespace miosix;
 using namespace std;
-
+using namespace AudioMath;
 
 /**
  * Sinusoidal Oscillator

@@ -9,6 +9,7 @@ void SinusoidalOsc::process(){
     unsigned int freq;
     //while (true){
         freq = freqControll->read();
+       // freq = linearMap(freq, 0, 4095, 0, 1000);
     //}
 
     phaseDelta = freq * 2 * M_PI / 44100.0;
