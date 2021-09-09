@@ -35,3 +35,12 @@ The stm32-Sub-Synth hardware user interface includes 4 rotary potentiomenters, w
 | 4  | Resonance of the filter  |
 | 5  | Change waveform  |
 | 6  | Change filter  |
+
+
+
+The ADC reading has been abstracted through the means of a Knob class. Below an example is reported
+
+``` Ruby
+class MyClass
+end
+```
