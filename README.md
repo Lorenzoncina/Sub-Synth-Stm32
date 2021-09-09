@@ -7,6 +7,8 @@ The compilation is performed using a Makefile, the CMakeList.txt file is instead
 
 ## The Project
 
+![sub_synth_foto](sub_synth_foto.jpg)
+
 Sub-Synth is a monophonic digital synthesizer, developed as a simple prof of concept of our Microaudio framework for digital audio (https://github.com/FedericoDiMarzo/microaudio). It was developed using the STM32f407vg board, running a version of the Miosix operating system, for which a DAC support of the board (Cirrus Logic cs43l22dac) has been implemented. To controll it , an interface of 4 potentiometers and two buttons was implemented.
 
 Sub-Synth consists of three different type of oscillators (sine, square, white noise) and four biquadratic filters (low pass and high pass of the first order and of the second order) implementing one of the which implements one of the most popular and simple synthesis techniques: subtractive synthesis.
