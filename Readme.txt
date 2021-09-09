@@ -1,4 +1,4 @@
-##configuration
+## configuration
 
 In order to compile the firmware and generate the binary file that needs to be flashed into the board, it’s necessary to follow the platform dependant instruction described in the Miosix wiki and to instal the toolchain supported by the operating system (https://miosix.org/wiki/index.php?title=Main_Page).
 
