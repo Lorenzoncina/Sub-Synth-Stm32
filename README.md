@@ -9,7 +9,7 @@ The compilation is performed using a Makefile, the CMakeList.txt file is instead
 
 ![sub_synth_foto](sub_synth_foto.jpg)
 
-Sub-Synth is a monophonic digital synthesizer, developed as a simple prof of concept of our Microaudio framework for digital audio (https://github.com/FedericoDiMarzo/microaudio). It was developed using the STM32f407vg board, running a version of the Miosix operating system, for which a DAC support of the board (Cirrus Logic cs43l22dac) has been implemented. To controll it , an interface of 4 potentiometers and two buttons was implemented.
+Sub-Synth is a monophonic digital synthesizer, developed as a simple prof of concept of our Microaudio framework for digital audio (https://github.com/FedericoDiMarzo/microaudio) developed as a project for the course of Advanced Operating System of Politecnico di Milano. It was developed using the STM32f407vg board, running a version of the Miosix operating system, for which a DAC support of the board (Cirrus Logic cs43l22dac) has been implemented. To controll it , an interface of 4 potentiometers and two buttons was implemented.
 
 Sub-Synth consists of three different type of oscillators (sine, square, white noise) and four biquadratic filters (low pass and high pass of the first order and of the second order) implementing one of the which implements one of the most popular and simple synthesis techniques: subtractive synthesis.
 The user can interact with the synth by choose the waveform of the oscillator with a button and then the frequency, he can then choose one of the filters and change the cut of frequency. Finally a potentiometer can be use to controll the volume of the sound synthetized.
@@ -21,3 +21,7 @@ In the following image subtractive synthesis is conceptually explained:
 
 
 ## User interface
+
+The stm32-Sub-Synth hardware user interface includes 4 rotary potentiomenters, which allow you to control some of the synthesizer parameters and two buttons which allow to swith beetwen waveforms and filter types.
+
+![interface_scheme](interface_scheme.png)
