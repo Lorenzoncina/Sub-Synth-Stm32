@@ -29,9 +29,9 @@ The stm32-Sub-Synth hardware user interface includes 4 rotary potentiomenters, w
 
 | Interface Element  | Function |
 | ------------- | ------------- |
-| 1  | oscillator frequency controll   |
+| 1  | Oscillator frequency controll   |
 | 2  | Cut off frequency of the fylter  |
-| 3  |  Volume  |
+| 3  | Volume  |
 | 4  | Resonance of the filter  |
 | 5  | Change waveform  |
 | 6  | Change filter  |
