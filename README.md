@@ -14,7 +14,7 @@ The user can interact with the synth by choose the waveform of the oscillator wi
 
 In the following image subtractive synthesis is conceptually explained:
 
-![Sub img](sub synth img.jpg)
+![sub_synth_img](sub_synth_img.jpg)
 
 
 
