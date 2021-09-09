@@ -38,9 +38,17 @@ The stm32-Sub-Synth hardware user interface includes 4 rotary potentiomenters, w
 
 
 
-The ADC reading has been abstracted through the means of a Knob class. Below an example is reported
+The ADC reading has been abstracted through the means of a Knob class. Below an example is reported, where 'A' indicates the port on the board and the number the pin:
 
-``` Ruby
-class MyClass
-end
+``` 
+Knob cutOff;
+cutOff = new Knob("A",2);
+cutOffFreq = cutOff->read();
+```
+
+Buttons have been controlled by the Miosix class Gpio, for example:
+
+``` 
+typedef Gpio<GPIOA_BASE,5>  oscButton;
+oscValue = oscButton::value();
 ```
