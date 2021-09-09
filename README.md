@@ -25,3 +25,13 @@ In the following image subtractive synthesis is conceptually explained:
 The stm32-Sub-Synth hardware user interface includes 4 rotary potentiomenters, which allow you to control some of the synthesizer parameters and two buttons which allow to swith beetwen waveforms and filter types.
 
 ![interface_scheme](interface_scheme.png)
+
+
+| Interface Element  | Function |
+| ------------- | ------------- |
+| 1  | oscillator frequency controll   |
+| 2  | Cut off frequency of the fylter  |
+| 3  |  Volume  |
+| 4  | Resonance of the filter  |
+| 5  | Change waveform  |
+| 6  | Change filter  |
