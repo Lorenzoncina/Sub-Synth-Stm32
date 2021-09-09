@@ -46,9 +46,4 @@ cutOff = new Knob("A",2);
 cutOffFreq = cutOff->read();
 ```
 
-Buttons have been controlled by the Miosix class Gpio, for example:
 
-``` 
-typedef Gpio<GPIOA_BASE,5>  oscButton;
-oscValue = oscButton::value();
-```
